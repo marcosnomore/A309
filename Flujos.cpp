@@ -38,7 +38,7 @@ int main(void)
 	
 	string str2("Hello, can you find Ben?");
 	size_t pos=str2.find("Ben", 15, 2);
-	if(pos!=string::npos)		//npos es un valor mucho m·s grande que el tamaÒo de la cadena, para que no haya colisiÛn
+	if(pos!=string::npos)		//npos es un valor mucho m√°s grande que el tama√±o de la cadena, para que no haya colisi√≥n
 		cout<<"First occurence of Ben was found at: "<<pos<<endl;
 	
 	string str3="C++ is an impressive language.";
