@@ -18,14 +18,14 @@ void main(void)
 	FILE *f=fopen("log.txt","r");		//abrimos el fichero
 	if(!f)
 	{
-		perror("Error al leer el archivo");		//esta función imprime en pantalla el tipo de error ocurrido si se da
+		perror("Error al leer el archivo");		//esta funciÃ³n imprime en pantalla el tipo de error ocurrido si se da
 	}
 	while(!feof(f))			//mientras no se alcance el final del fichero...
 	{
 		fgets(line, N, f);
 		if(ferror(f))		//si el fichero da un error, lo indica en pantalla y se rompe el bucle.
 		{
-			perror("Error al leer la línea");
+			perror("Error al leer la lÃ­nea");
 			puts("termino lectura");
 			break;
 		}
@@ -33,7 +33,7 @@ void main(void)
 		//filtro lineas vacias
 		if(line[0]=='\n'||line[0]=='\0') continue;		//rompe el bucle y pasa a la siguiente iteracion
 
-		//seguimos el protocolo de actuación normal.
+		//seguimos el protocolo de actuaciÃ³n normal.
 		switch(line[0])
 		{
 			case 'c':			//si se encuentra c al ppio de la linea, significa que es un comentario
