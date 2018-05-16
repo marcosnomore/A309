@@ -23,7 +23,7 @@ nodo_t* nuevo_elemento()		//pide memoria para un nuevo elemento y devuelve el pu
 		printf("Error en la reserva de memoria");
 	return elem;
 }
-void init(int dato)				//crea el nodo cabecera y le asigna un dato, debe ser la primera función
+void init(int dato)				//crea el nodo cabecera y le asigna un dato, debe ser la primera funciÃ³n
 {
 	head=nuevo_elemento();
 	head->dato=dato;
@@ -40,7 +40,7 @@ void insert_front(int dato)		//mete un dato al principio de la lista
 void insert_back(int dato)		//mete un dato al final de la lista
 {
 	nodo_t *p=head, *elem_nuevo;
-	//busco el último
+	//busco el Ãºltimo
 	while(p->siguiente!=NULL)
 		p=p->siguiente;
 	//genero el nuevo
@@ -50,7 +50,7 @@ void insert_back(int dato)		//mete un dato al final de la lista
 	//lo pongo al final
 	p->siguiente=elem_nuevo;
 }
-void pop_back(void)					//saca y elimina el último elemento de la lista
+void pop_back(void)					//saca y elimina el Ãºltimo elemento de la lista
 {
 	nodo_t *p=head, *q;
 	while(p->siguiente!=NULL)
@@ -61,7 +61,7 @@ void pop_back(void)					//saca y elimina el último elemento de la lista
 	free(p);
 	q->siguiente=NULL;
 }
-void remove_nodo(int dato)		//elimina un elemento intermedio de la lista situado en la posición "dato"
+void remove_nodo(int dato)		//elimina un elemento intermedio de la lista situado en la posiciÃ³n "dato"
 {
 	nodo_t *p=head, *q; int i;
 	for(i=0;i<dato;i++)
@@ -72,7 +72,7 @@ void remove_nodo(int dato)		//elimina un elemento intermedio de la lista situado
 	q->siguiente=p->siguiente;
 	free(p);
 }
-int get_size(void)					//te da el tamaño de la lista
+int get_size(void)					//te da el tamaÃ±o de la lista
 {
 	int tamano=0; nodo_t *p=head;
 	while(p!=NULL)
@@ -88,7 +88,7 @@ void main(void)
 {
 /*	int num[10], *num_var;
 	int ** matrix=0, i, n=10, m=10;
-	num_var=malloc(sizeof(int)*10);		//mejor poner num_var=(int *) malloc(...) porque malloc devuelve un puntero genérico, lo transformo a puntero a entero
+	num_var=malloc(sizeof(int)*10);		//mejor poner num_var=(int *) malloc(...) porque malloc devuelve un puntero genÃ©rico, lo transformo a puntero a entero
 	
 	//uso de num_var
 	num_var[8]=5;
