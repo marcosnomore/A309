@@ -6,7 +6,7 @@ using namespace std;
 class IObjeto
 {
 public:
-	virtual string get_name() = 0;	//función virtual pura. Todas las clases derivadas tienen que tener una función definida con el mismo nombre y argumentos.
+	virtual string get_name() = 0;	//funciÃ³n virtual pura. Todas las clases derivadas tienen que tener una funciÃ³n definida con el mismo nombre y argumentos.
 	virtual int get_grosor() = 0;
 };
 
@@ -27,7 +27,7 @@ public:
 	string get_name() {return name;}
 };
 
-string foo(IObjeto * o)		//caso de uso de la jerarquía
+string foo(IObjeto * o)		//caso de uso de la jerarquÃ­a
 {
 	return(o->get_name());
 }
