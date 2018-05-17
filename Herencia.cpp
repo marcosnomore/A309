@@ -84,7 +84,7 @@ Punto& Punto::operator = (const Punto& p)
 	return *this;
 }
 
-Punto::Punto(int id, double x, double y): _PuntoBase(id), x(x), y(y)	//necesario pasar a la clase heredada en lista de inicializaci髇
+Punto::Punto(int id, double x, double y): _PuntoBase(id), x(x), y(y)	//necesario pasar a la clase heredada en lista de inicializaci贸n
 {
 	//.....
 }
@@ -134,7 +134,7 @@ ostream& PuntoGordo::print(ostream& o)
 	return o;
 }
 
-void foo(Punto& p)		//funci髇 global
+void foo(Punto& p)		//funci贸n global
 {
 	p.print();			//si paso un punto gordo, la funcion convierte a punto y se ejecuta.
 }
@@ -144,20 +144,20 @@ int main(void)
 {
 	Punto p(8, 1.0, 3.0);
 	p.print(cout);
-	p._PuntoBase::print();	//Print de _PuntoBase. Lo suyo ser韆 impedirlo poniendo la funci髇 en protected.
+	p._PuntoBase::print();	//Print de _PuntoBase. Lo suyo ser铆a impedirlo poniendo la funci贸n en protected.
 	
 	PuntoGordo pg(p, PuntoGordo::ESTRELLA, PuntoGordo::AZUL);
 	pg.print();
 	
-	foo(pg);				//se pierde la naturaleza del punto gordo al llamar a una funci髇 que requiere un punto, no es menor.
+	foo(pg);				//se pierde la naturaleza del punto gordo al llamar a una funci贸n que requiere un punto, no es menor.
 	
-	Punto* pP=&pg;			//conversi髇 impl韈ita de puntogordo a punto
+	Punto* pP=&pg;			//conversi贸n impl铆cita de puntogordo a punto
 	pP->print();
 	
 	//asignar puntos
 	PuntoGordo pg1(pg);		//funciona correctamente con constructor copia por defecto.
 	pg1.print();
-	pg1=pg;					//tambi閚 copia correctamente.
+	pg1=pg;					//tambi茅n copia correctamente.
 	
 	return 0;
 }
