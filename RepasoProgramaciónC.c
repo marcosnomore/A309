@@ -9,7 +9,7 @@ typedef struct nodo
 	struct nodo *siguiente;
 }punto;
 
-punto* obtener_dato (void)		//pregunta al usuario por las coordenadas de un punto, es una función robusta, no admite otra cosa que no sean números
+punto* obtener_dato (void)		//pregunta al usuario por las coordenadas de un punto, es una funciÃ³n robusta, no admite otra cosa que no sean nÃºmeros
 {
 	punto *a;
 	a=(punto*)malloc(sizeof(punto));
@@ -23,7 +23,7 @@ punto* obtener_dato (void)		//pregunta al usuario por las coordenadas de un punt
 		scanf("%f %f", &a->x, &a->y);
 		fflush(stdin);
 		if((a->x<-100)||(a->x>100)||(a->y<-100)||(a->y>100))
-			printf("Punto no válido, las coordenadas deben estar entre -100 y 100.\n");
+			printf("Punto no vÃ¡lido, las coordenadas deben estar entre -100 y 100.\n");
 	}
 	return(a);
 }
@@ -35,11 +35,11 @@ void main(void)
 	do
 	{
 		v=obtener_dato();
-		if(i==0)				//La primera vez que se pide un dato (estamos a la cabeza de la lista) se guarda la dirección de memoria de la cabeza en head
+		if(i==0)				//La primera vez que se pide un dato (estamos a la cabeza de la lista) se guarda la direcciÃ³n de memoria de la cabeza en head
 			head=v;
 		centroide.x=centroide.x+v->x;
 		centroide.y=centroide.y+v->y;
-		i++;					//se cuenta el número de puntos en la lista para poder hacer el cálculo del centroide
+		i++;					//se cuenta el nÃºmero de puntos en la lista para poder hacer el cÃ¡lculo del centroide
 		printf("Desea introducir otro punto?: (S/N) ");
 		fflush(stdin);
 		scanf("%c", &respuesta);
