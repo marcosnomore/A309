@@ -14,7 +14,7 @@ public:
 	friend Punto2D operator + (double k, Punto2D p);
 	Punto2D operator + (double k);
 	
-	//función independiente suma
+	//funciÃ³n independiente suma
 //	friend Punto2D operator + (const Punto2D p1, const Punto2D p2);
 	bool operator ! ();
 };
